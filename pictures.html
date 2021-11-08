@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+ <html>
+  <head>
+ <meta charset="UTF-8">
+ <title>Vinyl_pictures </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- <link href="pictures.css" rel="stylesheet" type="text/css"></link> -->
+ <style>
+
+body{
+  padding:0;
+  margin:0;
+  background-color:#262626 ;
+}
+
+
+
+input[type="radio"]{
+  width:135px;
+  height:112px;
+  border:1px solid white;
+  display:inline-block;
+  margin:10px 0 15px 15px;
+  border:2px solid transparent;
+  -webkit-appearance:none;
+  cursor:pointer;
+}
+
+input[type="radio"]:checked{
+  border:2px solid #00baff;
+}
+
+input[type="radio"]:hover{
+border:2px solid blue;
+}
+
+.display-image{
+  width:99%;
+  height:350px;
+  margin:0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-duration: .5s ;
+}
+
+
+#one{background-image: url(work_sample1.jpg); background-size:cover;}
+#two{background-image: url(work_sample2.jpg); background-size:cover;}
+#three{background-image: url(work_sample3.jpg); background-size:cover;}
+#four{background-image: url(work_sample4.jpg); background-size:cover;}
+#five{background-image: url(work_sample5.jpg); background-size:cover;}
+#six{background-image: url(work_sample6.jpg); background-size:cover;}
+
+#one:checked ~ .display-image{background-image: url(work_sample1.jpg);}
+#two:checked ~ .display-image{background-image: url(work_sample2.jpg);}
+#three:checked ~ .display-image{background-image: url(work_sample3.jpg);}
+#four:checked ~ .display-image{background-image: url(work_sample4.jpg);}
+#five:checked ~ .display-image{background-image: url(work_sample5.jpg);}
+#six:checked ~ .display-image{background-image: url(work_sample6.jpg);}
+
+
+
+.galery{
+  color:white;
+  text-align: center;
+ 
+}
+
+.go_back{
+  display: inline-block;
+  float:right;
+  width:70px;
+  height:30px;
+  background-image: url(goback.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat:no-repeat;
+  margin-right:0px;
+  padding:0 15px;
+  border:2px solid transparent;
+}
+
+
+.go_back:hover{
+  border:2px solid white;
+  border-radius:30px;
+}
+
+
+
+@media only screen and (min-width: 1000px){
+
+  .display-image{height:700px;}
+
+}
+
+
+   </style>
+</head>
+<body>
+
+  <h1 class="galery">GALERY <a href="index.html#portfolio"><div class="go_back"></div></a> </h1>
+   
+</br>
+
+
+
+<input type="radio" name="image" id="one" checked>
+<input type="radio" name="image" id="two">
+<input type="radio" name="image" id="three">
+<input type="radio" name="image" id="four">
+<input type="radio" name="image" id="five">
+<input type="radio" name="image" id="six">
+
+
+<div class="display-image"></div>
+
+
+ 
+
+</body>
+ </html>

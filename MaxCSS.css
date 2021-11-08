@@ -1,0 +1,658 @@
+/*RESET STYLESHEET*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs*/
+
+
+*{
+    text-decoration: none;
+}
+
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+*{
+    box-sizing: border-box;}
+
+/*############### up to here I have reset stylesheet ####################*/
+
+
+
+header{
+background-color: #fff;
+width:100%;
+height:100px;
+}
+
+
+header .header-brand{
+    font-family:pattaya, sans-serif;
+    font-size:24px;
+    font-weight:900;
+    color:#111;
+    display:block;
+    margin:0 auto;    /*this makes block to be setted at the center of its parent (here the parent is body) because "auto" chacs available distance and split it by half and add to margin-left and margin-right , but you will not be able to see differance (because block element takes all the width of the screen) until you set up width of your block less than width of the screen */
+    text-align: center;      /*this way i set the text inside its block horizontaly at the center of the block*/
+padding:20px 0;
+background-color: l
+
+}
+
+header nav ul{
+margin:0 auto;      /*we center the block in its parent */
+width:fit-content; /*so (width:fit-content) makes our block to be not more than needet by its content*/
+
+}
+
+header nav ul li{
+  display:inline-block;
+  float:left;  /*to get rid off slode gap between the links*/
+  list-style: none;
+  padding: 0 9px;
+  
+}
+
+header nav ul li a{
+    font-family: Catamaran;
+    font-size:15px;
+    font-weight: bold;
+    color:#111;
+    text-transform: uppercase;
+    border:2px solid transparent;
+ 
+}
+
+header nav ul li a:hover{
+    border:2px solid lavender;
+    border-radius:30px;
+    background-color: lavender;
+   padding:5px;
+}
+
+header .header-icon{
+    display:none;
+}
+
+
+@media only screen and (min-width: 1000px){
+header{
+    width:95%;
+    margin:10px auto 20px;
+    border-radius: 25px;
+    border:4px solid lavender;
+    box-shadow: 2px 2px 10px #111;
+}
+
+    header .header-brand{
+          margin:31px 0px;    /*so we wanted to center this element in the header. (header=100px - header-brand=38px = 62/2 = 31px should be from the top and from the bottom)*/
+          text-align:left;
+          line-height:38px ;     
+      padding:0px 20px 0px 40px;
+      border-right: 3px solid #111;
+      float:left;    /*we made a div element to behave like inline block (now it is not on the whall width of its parent)*/
+      font-size:35px;
+      background-color: lavender;
+    }
+
+      header nav ul{
+        margin:20px 0px 20px 20px;  /*header height 100px - nav ul li a 60px= 40px/2=20 px from the top and bottom to center it*/
+        float:left;    
+        }
+        
+        header nav ul li a{
+            line-height: 60px;
+            font-size:15px;
+            padding:5px;
+        }
+
+        header .header-icon{ 
+          display:block;
+            float:right;
+            width:100px;
+            height:100PX;
+            margin:5px 80px 0 0;
+
+        }
+
+        header .header-icon img{
+            width:180px;
+            height:150px;
+        }
+
+}
+
+/*Index*/
+
+.index-banner{
+    width:100%;
+    height:calc(100vh - 100px);
+    background-image: url('mobile_back1.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    display:table;  /*I made the index-banner a table to be able to position "vertical-center" class in its parent*/
+}
+
+.vertical-center{
+display:table-cell;
+vertical-align:top;
+}
+
+.index-banner h2{
+    font-size:60px;
+    font-weight:900;
+    line-height: 70px;
+    color:#fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;       /*top left bloor color*/
+    margin:20px 20px 0px 20px;
+}
+
+.index-banner h1{
+    font-family:Cormorant Garamond ;
+    font-size:28px;
+    font-weight:bold;
+    line-height: 40px;  /*distance between lines*/
+    color:#fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;       /*top left bloor color*/
+    margin-top:60px;
+}
+
+@media only screen and (min-width: 1000px){
+    .index-banner{
+width:90%;
+margin:0 auto;
+background-image: url('desctop_back.jpg');
+border-radius: 25px;
+border:4px solid lavender;
+    box-shadow: 2px 2px 10px #111;
+    } 
+    .index-banner h2{
+    font-size: 70px;
+    margin-top: 60px;
+    }
+
+}
+
+ /*############## About Vinil ############################*/
+
+.about_vinil{
+    text-align: center;
+    padding:15px;  
+}
+
+.about_vinil h2{
+    font-family:pattaya, sans-serif;
+font-size: 27px;
+line-height: 30px;
+margin-bottom: 10px;
+}
+
+.about_vinil div p{
+    font-weight: bold;
+display:block;
+padding:10px 10px;
+border:4px solid lavender;
+border-radius: 30px;
+}
+
+.characteristics{
+    border:4px solid lavender;
+    border-radius: 35px;
+    box-shadow: 2px 2px 10px #111;
+margin-bottom:20px;
+padding:10px;
+align-items: center;
+}
+
+.about_vinil .pic{
+    width:98%;
+            }
+    
+            .about_vinil img{
+                width:100%;
+                border-radius: 35px;
+            }
+    .explane{
+        width:98%;
+        align-self: center;
+    }
+  
+    .img_durable{
+      padding:10px 0;
+        
+    }
+    
+    .img_proffesional{
+     padding:10px 0;
+        border-radius:50px;
+    }
+
+
+@media only screen and (min-width: 1000px){
+    .about_vinil{
+        width:calc(100% - 0px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        padding:0px;}
+
+        .about_vinil .pic{
+width:48%;
+        }
+
+        .about_vinil img{
+            width:100%;
+        }
+.explane{
+    width:48%;
+    align-self: center;
+}
+
+.about_vinil h2{
+    font-family:pattaya, sans-serif;
+font-size: 34px;
+line-height: 30px;
+margin: 0px 0px 20px 0px;
+}
+
+.about_vinil div p{
+    font-weight: bold;
+display:block;
+padding:10px 10px;
+border:4px solid lavender;
+border-radius: 30px;
+font-size: 24px;
+}
+
+.characteristics{
+    border:8px solid lavender;
+    display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        margin:10px 0px;
+        box-shadow: 2px 2px 10px #111;
+}
+
+.div-durable{
+    order:2;
+}
+
+.durable_text{
+    order:1;
+}
+
+.img_durable{
+  padding:0;
+}
+
+.img_proffesional{
+ padding:0;
+}
+
+}
+
+/*THIS IS THE WAY YOU MAKE RESPONSIVE VIDEO SIZE*/
+.video{
+    position: relative;
+    width:90%;
+    padding-bottom: 56.25%;
+    height:0;
+    margin:0 auto;
+    border:4px solid lavender;
+    box-shadow: 2px 2px 10px #111;
+    background-color: lavender;
+}
+
+.video iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+
+@media only screen and (min-width: 1000px){
+.wrapper{
+    width:1000px;
+    margin:0 auto;
+}
+
+.video{
+    width:100%;
+  border-radius: 25px;
+}
+
+.video iframe{
+    width:95%;
+    left:2.5%;
+}
+  
+}
+
+/*############## Work Samples ############################*/
+
+.work_samples{
+    display:block;
+    width:95%;
+    text-align: center;
+    font-family:pattaya, sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+    border-bottom: 4px solid black;
+    margin:20px auto;
+}
+
+.samples .cell{
+    margin: 10px auto;
+    width:90%;
+    border-radius: 35px;
+    border:4px solid lavender;
+    box-shadow: 2px 2px 10px #111;
+}
+
+.img_cell{
+width:100%;
+border-radius: 35px;
+cursor: pointer;
+}
+
+.samples{position:relative;}
+
+@media only screen and (min-width: 1000px){
+.samples{
+    width:calc(100% - 0px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.samples .cell{
+    width:48%;
+    
+}
+
+.img_cell{
+    width:100%;
+}
+}
+
+
+/*FOOTER*/
+
+footer{
+    width:calc(100% - 20px);
+    padding:13px 13px;
+    background-color: #111;
+    margin-top: 20px;
+    overflow: hidden;   /*this is the way we fixed our footer, we had some problems - try to remove it see what happans*/
+    margin:0 auto 15px;
+    border-radius:35px;
+    border:4px solid lavender;
+    box-shadow: 2px 2px 10px #111;
+}
+
+footer ul {
+   width:fit-content;
+   float:left;    /*float left makes boxes float to some side*/
+   padding-left:0px;
+}
+
+footer ul li{
+        display:block;
+        list-style: none;   
+      
+ }
+
+ .footer-links-main{
+    font-family: Catamaran;
+    font-size:24px;
+    color:#fff;
+    line-height:40px ;
+    
+ }
+
+ .mail{
+     font-size: 22px;
+ }
+
+
+ .footer-sm{
+text-align: center;
+width:50px;
+margin:0 auto;
+
+ }
+
+ .footer-sm img{
+    width:50px;
+    margin-bottom: 10px;
+    margin:0 auto;
+     }
+
+     .insta_text{
+        color:white;
+        font-size: 12px;
+        font-style: italic;
+        border-bottom: 0.5px solid white;
+       
+    }
+
+     
+     @media only screen and (min-width: 1000px){
+       
+
+         .footer-sm{
+       width:150px;
+       float: right;
+        }
+       
+        .footer-sm img{
+           width:110px;
+            }
+
+       .insta_text{
+           font-size: 33px;
+       }
+
+     }
+
+     @media only screen and (min-width: 375px){
+        .footer-sm{
+            float: right; 
+        }
+     }
+
+
+
+
+     @media only screen and (min-width: 1000px){      /* when you go over this size of the screen */
+     .slider{
+        width:99%;
+        height:auto;
+     } 
+
+     .left{
+        left:-35px;
+        top:55%;
+     }
+
+     .right{
+right:-35px;
+top:55%;
+     }
+
+  
+     }
+
+
+
+
+
+     .slider{
+         top:0px;
+         display:none;
+position:absolute;
+width:99%;
+height:60%;
+/* background: url("work_sample1.jpg");
+background-size:cover;
+background-repeat: no-repeat;  */
+border-radius:35px;
+    border:4px solid lavender;
+    box-shadow: 2px 2px 10px #111;
+     }
+
+     .slider_img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:35px;
+     }
+
+
+     .close_sign{
+         position:absolute;
+         top:5px;
+         right:10px;
+         width:30px;
+         height:30px;
+         background:url("close.png") no-repeat;
+         background-size: contain;
+     }
+
+     .left{
+        position:absolute;
+        top:50%;
+        left:-3px;
+        width:50px;
+        height:50px;
+        background:url("next.png") no-repeat;
+        background-size: contain;
+        transform: rotate(180deg);
+     }
+
+
+     .right{
+        position:absolute;
+        top:50%;
+        right:-3px;
+        width:50px;
+        height:50px;
+        background:url("next.png") no-repeat;
+         background-size: contain;
+     }
+
+
+.left:hover{
+width:55px;
+height:55px;
+cursor: pointer;
+} 
+
+.right:hover{
+    width:55px;
+    height:55px;
+    cursor: pointer;
+    } 
+
+    .close_sign:hover{
+        width:35px;
+        height:35px;
+        cursor: pointer;
+        } 
+
+

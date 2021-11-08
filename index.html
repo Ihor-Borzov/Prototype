@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+   <!--  coflooring.epizy.com -->
+ <html>
+  <head>
+ <meta charset="UTF-8">
+ <title>Colorado_Vinyl </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Catamaran" rel="stylesheet">
+
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link href="MaxCSS.css" rel="stylesheet"
+    type="text/css"></link>
+    <style>
+      </style>
+  </head>
+  <body>
+
+
+
+
+
+<header>
+    
+  <a href="index.html" class="header-brand">  Colorado Vinyl Flooring</a>
+  
+    <nav>
+<ul>
+  <li><a href="#about_vinil_floors">About</a></li>
+  <li><a href="#portfolio">Portfolio</a></li>
+  <li><a href="#contacts">Contacts</a></li>
+</ul>
+  </nav>
+
+<div class="header-icon"><img src="emblem.png" alt="icon"></div>
+
+</header>
+<main>
+ 
+<section class="index-banner">
+  <div class="vertical-center">
+<h2>Vinyl Floors instalation</br> contractor</h2>
+<h1>The floor you enjoy with no compromises</h1>
+</div>
+</section>
+
+<div class="wrapper">
+<section id="about_vinil_floors" class="about_vinil">
+
+  <div class="characteristics">
+<div class="pic"><img class="img_eco" src="eco.jpg"></div>
+<div class="explane eco">
+  <h2>Eco friendly</h2>
+  <p> Vinyl is a popular flooring material for homes with kids because it's unaffected by water, resistant to stains, easy to take care of, inexpensive, and very durable. It's very difficult to rip, tear, or damage vinyl flooring. In most cases, vinyl flooring can stand up to daily life with children. floor manufacturers have eliminated the use of chemical and now provide 'phthalates-free' vinyl flooring.</p>
+</div>
+</div>
+
+<div class="characteristics">
+<div class="pic div-durable"><img class="img_durable" src="durable.jpg"></div>
+<div class="explane durable_text">
+  <h2>Highly durable</h2>
+<p>Vinyl flooring is highly durable. If installed and maintained correctly, it can last upwards of 10-20 years. That said, vinyl is a great choice for any room in your house that get the most foot traffic. It is durable enough to be placet even in the gym.  It also allows moisture to evaporate quickly, making it a good option for hot yoga studios. Additionally, most vinyl flooring has a wear layer on its surface that resists scratches and stains. </p>
+</div>
+</div>
+
+<div class="characteristics">
+<div class="pic"><img class="img_proffesional" src="worker.jpg"></div>
+<div class="explane proffesional">
+  <h2>Fast and proffesional instalation</h2>
+<p>We perform either residential and commercial installation, we have individual aproach to each of our costumers and highly appreciate their time and money. Our proffesional team with 4 years of expiriance will meet all your needs, expectations and requiremants.</br> Ask for free demolition and estimate.</p>
+</div>
+</div>
+
+</section>
+<!-- 
+<div class="video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/neYIzRPvtvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div> -->
+
+  <h2 id="portfolio" class="work_samples">Our work samples </h2>
+  
+<section class="samples galery">
+    <div class="cell uno"><img class="img_cell" src="work_sample1.jpg"></div>
+    <div class="cell dos"><img class="img_cell" src="work_sample2.jpg"></div>
+    <div class="cell tres"><img class="img_cell" src="work_sample3.jpg"></div>
+    <div class="cell quatro"><img class="img_cell" src="work_sample4.jpg"></div>
+    <div class="cell sinco"><img class="img_cell" src="work_sample5.jpg"></div>
+    <div class="cell siere"><img class="img_cell" src="work_sample6.jpg"></div>
+
+
+
+    <div class="slider">
+      <img class="slider_img" src="" alt="image of a floor">
+      <div class="left"></div>
+      <div class="close_sign"></div>
+      <div class="right"></div>
+    </div>
+
+  </section>
+
+
+</div>
+</main>
+
+<div class="wrapper">
+<footer>
+<ul id="contacts" class="footer-links-main">
+<li>Contact information:</li>
+<li><span class="font">Maksym Kynal</span></li>
+<li><span class="font"> Phone:</span>  8574456229</li>
+<li class="mail"><span class="font"> Email:</span>  spyro3537@gmail.com</li>
+</ul>
+
+<div class="footer-sm">
+  <a href="https://instagram.com/colorado_vinyl_flooring?utm_medium=copy_link" target="_blank">
+  <img src="instagram.png"   alt="instagram icon">
+</a>
+<p class="insta_text">Instagram</p>
+</div>
+
+</footer>
+</div>
+
+
+
+<script>
+
+let imagesHTML = document.querySelectorAll('.galery .img_cell');
+ let images = []
+ let slider = document.querySelector('.slider');
+let close_sign = document.querySelector('.close_sign').addEventListener('click',closeSlider);
+let buttonPrevious = document.querySelector('.left').addEventListener('click',previousImage);
+let buttonNext = document.querySelector('.right').addEventListener('click',nextImage);
+let slider_img = document.querySelector('.slider_img');
+
+let currentImageIndex;
+
+ 
+for (let i=0;i<=imagesHTML.length-1;i++){
+ imagesHTML[i].addEventListener('click',(currentEvent)=>openSlider(i)); // so this is Closure (zamicanie). each time you add event listener JS saves current variable "i" so when click happens JS already knows what button been placet, because it saved that local variable "i" when was implementing the function.  and "currentEvent" is just a button been placed
+  
+images.push(imagesHTML[i].src);  // this is a place from where I will be taking pictures.
+}
+
+
+
+
+function openSlider(ind){
+  slider.style.display = "block";
+slider_img.src = images[ind];  // slider.style.background = (`url('${images[ind]}') 50%/contain no-repeat`);  // i hed to specify  position, size and repeat, because after reasigning style property with backgraund - all its related propertyes get cancelled: (background-size; background-repeat...)
+currentImageIndex = ind;
+}
+
+ 
+function closeSlider(){
+  slider.style.display = "none";
+ }
+
+
+function nextImage(){
+  if (currentImageIndex == imagesHTML.length-1){
+    currentImageIndex = 0;
+    slider_img.src = images[currentImageIndex]
+  }
+
+else{  slider_img.src = images[++currentImageIndex];}
+
+  currentImageIndex = currentImageIndex++;
+}
+
+
+ function previousImage(){
+if (currentImageIndex == 0){
+currentImageIndex =  imagesHTML.length-1;
+slider_img.src = images[currentImageIndex]
+}
+
+else{  slider_img.src = images[--currentImageIndex];}
+
+  currentImageIndex = currentImageIndex--;
+ }
+
+
+
+
+
+
+</script>
+  </body>
+ </html>
